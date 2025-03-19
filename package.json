@@ -1,10 +1,13 @@
 {
-  "name": "mcp-server-quickstart",
-  "version": "1.0.0",
+  "name": "@zaki-yama-labs/mcp-server-quickstart",
+  "version": "1.0.2",
   "type": "module",
-  "main": "index.js",
+  "bin": {
+    "my-mcp-server": "build/index.js"
+  },
   "scripts": {
     "build": "tsc && chmod 755 build/index.js",
+    "prepare": "npm run build",
     "watch": "tsc --watch"
   },
   "files": ["build"],
