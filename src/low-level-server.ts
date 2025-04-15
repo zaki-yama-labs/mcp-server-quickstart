@@ -64,6 +64,9 @@ server.setRequestHandler(ListToolsRequestSchema, async () => {
   return {
     tools: [
       {
+        // NOTE: Use `_` instead of `-` if it's intended to be used by Cursor.
+        // Because Cursor seems to automatically transform kebab case names to snake case.
+        // ref. https://forum.cursor.com/t/im-getting-mcp-error-with-the-latest-update/72733/50
         name: "get_forecast",
         description: "Get weather forecast for a location",
         inputSchema: {
